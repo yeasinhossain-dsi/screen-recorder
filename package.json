@@ -12,6 +12,10 @@
   "keywords": [],
   "author": "Md. Yeasin Hossain",
   "license": "ISC",
+  "engines": {
+    "npm": "~6.9.0",
+    "node": "~11.1.0"
+  },
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^5.0.2",
