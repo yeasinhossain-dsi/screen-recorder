@@ -1,0 +1,21 @@
+{
+  "name": "screen-record",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "compile": "tsc -w",
+    "serve": "http-server ./",
+    "start": "yarn clean && concurrently \"yarn compile\" \"yarn serve\""
+  },
+  "keywords": [],
+  "author": "Md. Yeasin Hossain",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "http-server": "^0.12.1",
+    "typescript": "^3.7.5"
+  }
+}
