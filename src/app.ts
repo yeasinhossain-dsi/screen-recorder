@@ -1,13 +1,13 @@
 window.addEventListener("load", () => {
-  alert("Yeasin");
-  const videoElem = document.getElementById("previewVideo");
-  const configuration = {
+  const videoElem = document.getElementById("previewVideo") as HTMLVideoElement;
+  const configuration: MediaStreamConstraints = {
     audio: false,
     video: true
   };
 
-  navigator.mediaDevices.getUserMedia(configuration).then(stream => {
-    // @ts-ignore
-    videoElem.srcObject = stream;
-  });
+  navigator.mediaDevices
+    .getUserMedia(configuration)
+    .then((stream: MediaStream) => {
+      videoElem.srcObject = stream;
+    });
 });
