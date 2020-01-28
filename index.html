@@ -4,16 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <style>
+      #previewVideo {
+        width: 100%;
+      }
+    </style>
+
     <title>Screen Recorder</title>
-    <script src="dist/main.js"></script>
   </head>
   <body>
-    <h3>Screen recorder</h3>
-
-    <div class="row">
-      <div class="column">
-        <video id="previewVideo" controls></video>
+    <div class="container">
+      <h3>Screen recorder</h3>
+      <div class="row">
+        <div class="col s6">
+          <div class="video-container">
+            <video id="previewVideo" controls></video>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="dist/main.js"></script>
   </body>
 </html>

@@ -6,20 +6,22 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "compile": "tsc -w",
-    "serve": "http-server ./",
-    "start": "yarn clean && concurrently \"yarn compile\" \"yarn serve\""
+    "serve": "http-server -p 4200 ./",
+    "open": "opener http://localhost:4200",
+    "start": "yarn clean && concurrently \"yarn compile\" \"yarn serve\" \"yarn open\""
   },
   "keywords": [],
   "author": "Md. Yeasin Hossain",
   "license": "ISC",
   "engines": {
-    "npm": "~6.9.0",
-    "node": "~11.1.0"
+    "npm": ">=6.9.0",
+    "node": ">=11.1.0"
   },
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^5.0.2",
     "http-server": "^0.12.1",
+    "opener": "^1.5.1",
     "typescript": "^3.7.5"
   }
 }

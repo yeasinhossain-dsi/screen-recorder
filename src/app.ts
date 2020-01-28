@@ -9,5 +9,8 @@ window.addEventListener("load", () => {
     .getUserMedia(configuration)
     .then((stream: MediaStream) => {
       videoElem.srcObject = stream;
+    })
+    .catch(err => {
+      console.error(Object.keys(err));
     });
 });
