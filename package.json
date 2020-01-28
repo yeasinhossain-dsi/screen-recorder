@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist/",
-    "compile": "tsc -w",
-    "serve": "http-server -p 4200 ./",
-    "open": "opener http://localhost:4200",
-    "start": "yarn clean && concurrently \"yarn compile\" \"yarn serve\" \"yarn open\""
+    "dev": "webpack-dev-server",
+    "open": "opener http://localhost:9000",
+    "start": "yarn clean && concurrently \"yarn dev\" \"yarn open\""
   },
   "keywords": [],
   "author": "Md. Yeasin Hossain",
@@ -20,8 +19,11 @@
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^5.0.2",
-    "http-server": "^0.12.1",
     "opener": "^1.5.1",
-    "typescript": "^3.7.5"
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }

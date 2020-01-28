@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
     audio: false,
     video: true
   };
-
   navigator.mediaDevices
     .getUserMedia(configuration)
     .then((stream: MediaStream) => {
